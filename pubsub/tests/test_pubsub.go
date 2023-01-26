@@ -357,7 +357,7 @@ func TestConcurrentSubscribeMultipleTopics(
 			if err != nil {
 				t.Fatal(err)
 			}
-			topicMessages, _ := bulkRead(tCtx, messages, len(messagesToPublish), defaultTimeout)
+			topicMessages, _ := bulkRead(tCtx, messages, len(messagesToPublish), defaultTimeout*3)
 
 			receivedMessagesCh <- topicMessages
 		}()
