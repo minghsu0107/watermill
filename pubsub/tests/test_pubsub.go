@@ -315,11 +315,11 @@ func TestConcurrentSubscribeMultipleTopics(
 	defer closePubSub(t, pub, sub)
 
 	messagesCount := 100
-	topicsCount := 10
+	topicsCount := 20
 
 	if testing.Short() {
 		messagesCount = 50
-		topicsCount = 5
+		topicsCount = 10
 	}
 
 	var messagesToPublish []*message.Message
